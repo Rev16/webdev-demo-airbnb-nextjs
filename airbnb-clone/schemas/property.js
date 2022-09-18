@@ -22,7 +22,7 @@ export default {
           { title: "House", value: "house" },
           { title: "Flat", value: "flat" },
           { title: "Bed and Breakfast", value: "bed-and-breakfast" },
-          { title: "Botique Hotel", value: "botique-hotel" },
+          { title: "Boutique Hotel", value: "boutique-hotel" },
         ],
         layout: "radio",
       },
@@ -41,7 +41,6 @@ export default {
       type: "array",
       of: [{ type: "propertyImage" }],
     },
-
     {
       name: "pricePerNight",
       title: "Price Per Night",
@@ -78,14 +77,20 @@ export default {
     },
     {
       name: "host",
-      title: "Host",
+      title: "host",
       type: "host",
     },
     {
-      name: "review",
-      title: "Review",
+      name: "reviews",
+      title: "Reviews",
       type: "array",
       of: [{ type: "review" }],
     },
   ],
+  preview: {
+    select: {
+      title: "title",
+      pricePerNight: "pricePerNight",
+    },
+  },
 };
